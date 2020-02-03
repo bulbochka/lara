@@ -1,0 +1,311 @@
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+*{
+	margin: 0;
+	padding: 0;
+}
+html{
+    height: 100%;
+    overflow-x: hidden;
+}
+#item-h{
+    text-align: center;
+    color:black;
+}
+/*MAIN PAGE*/
+/*HEADER*/
+header{
+    width:100%;
+    height: 80px;
+    background-color: black;
+}
+#navigation{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+#nav{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+#menu-page{
+    text-decoration: none;
+    color: white;
+}
+#cart-login{
+    width: 70px;
+}
+
+/*IMAGE MENU*/
+#room-container{
+    width: 100%;    
+}
+#rooms{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+#img{
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+#room:hover{
+    transition:5s;
+    transform:scale(1.2);
+}
+#living-room, #bedroom, #kitchen, #bathroom{
+    text-align: center;
+    color:black;
+}
+
+/*FOOTER*/
+footer{
+    width: 100%;
+    height: 80px;
+    background-color: black;
+}
+
+/*CONTACT-PAGE*/
+#social-container{
+    width:100%;
+    padding: 10px;
+}
+#social{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+#social a{
+    text-decoration:none;
+    color:black;
+    font-size:16px;
+}
+#map-container{
+    padding: 10px;
+}
+#call-back-container{
+    width: 100%;
+    padding:10px;
+    color:black;
+    text-align: center;
+}
+#call-back{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#call-back-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+#call-back-input input{
+    width: 450px;
+    height: 40px;
+    margin-bottom: 15px;
+    border:0.5px black  solid;
+}
+#call-back-input p{
+    color: black;
+    font-size: 16px;
+}
+#message{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+#message p{
+    color:black;
+    font-size: 16px;
+}
+#message-text{
+    width: 450px;
+    height: 95px;
+    margin-bottom: 15px;
+    border:0.5px black  solid;
+}
+#btn-send-message{
+    margin-left:15%;
+    width: 455px;
+    height: 40px;
+    margin-top:1%;
+    border:0.5px black  solid;
+    color:white;
+    background-color: black;
+    font-size: 16px;
+}
+#btn-send-message:hover{
+    border:0.5px black  solid;
+    color:black;
+    background-color: white;
+}
+
+/*NEWS PAGE*/
+#parallax-container{
+    width: 100%;
+}
+.parallax-1{
+    background-image: url(../image/apartment/apartmentNews-4.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 45vh;
+}
+.parallax-2{
+    background-image: url(../image/apartment/apartmentNews-3.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 45vh;
+}
+.parallax-3{
+    background-image: url(../image/apartment/apartmentNews-2.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 45vh;
+}
+.parallax-4{
+    background-image: url(../image/apartment/apartment-5.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 45vh;
+}
+.parallax-5{
+    background-image: url(../image/apartment/apartment-4.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 45vh;
+}
+#text-news{
+    text-align: left;
+}
+.pagination a {
+    position:relation;
+    background-color: black;
+    color: white;
+    font-size:16px;
+    border:0.5px black solid;
+}
+.en{
+    width:100%;
+    text-align: center;
+}
+.pagination{
+    display: inline-block;
+}
+#text-container{
+    width: 100%;
+}
+#item-about{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px;
+    height: 300px;
+    text-align: center;
+    color: black;
+    font-size: 15px;
+}
+.hr hr{
+    width: 80%;
+    border:0.5px black solid;
+}
+.hr{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#text-about p{
+    padding: 30px;
+}
+#text-about{
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: contain;
+   /* background-image: url(../image/picture.jpg);*/
+}
+#reviews-container{
+    width:100%;
+    height: 550px;
+    background-image: url(../image/mramor.jpg);
+    margin-bottom:1%;
+    text-align: center;
+    color:black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#reviews-container-comment{
+    width:100%;
+    height: 400px;
+    background-image: url(../image/mramor.jpg);
+    margin-bottom:1%;
+    text-align: center;
+    color:black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#reviews-form{
+    width: 80%;
+}
+#send-review-btn{
+    width: 80%;
+    border:0.5px black solid;
+    color:white;
+    background-color: black;
+}
+#send-review-btn:hover{
+    border:0.5px black solid;
+    color:black;
+    background-color: white;
+}
+#comment-container{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    
+}
+#comment{
+    padding: 2%;
+}
+.scrollup {
+    position: fixed; /* фиксированная позиция */
+    color: #ffff; /* цвет текста */
+    background-color: #ed0f80 ; /* цвет заднего фона */
+    right: 20px; /* расстояние от правого края */
+    bottom: 0px; /* расстояние от нижнего края */
+    padding: 8px 10px; /* отступы до содержимого блока */
+    font-size: 20px; /* размер шрифта (иконки) */
+    border-top-left-radius: 4px; /* скругление верхнего левого угла */
+    border-top-right-radius: 4px; /* скругление верхнего правого угла */
+    cursor: pointer; /* форма курсора */
+    display: none; /* не отображать элемент */
+    text-align: center; /*выравнивание содержимого элемента по центру */
+    height: 50px;
+  }
+  .scrollup:hover {
+    background-color: #000; /* цвет заднего фона при наведении */
+  }
