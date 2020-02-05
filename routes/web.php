@@ -21,3 +21,10 @@ Route::get('/about-us-page/', 'AboutUsController@index');
 Route::get('/administrator/', 'AdministratorController@index');
 
 Route::resource('about-us-page', 'AboutUsController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
