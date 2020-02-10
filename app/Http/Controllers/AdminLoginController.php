@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\AdminLogin;
 
 class AdminLoginController extends Controller
 {
@@ -13,7 +14,7 @@ class AdminLoginController extends Controller
      */
     public function index()
     {
-        return view('admin.admin-login-page');
+        return view('admin-layouts.login-page-admin');
     }
 
     /**
@@ -34,7 +35,15 @@ class AdminLoginController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'login' => 'required',
+            'password' => 'required'
+       ]);
+       
+       $admin = new AdminLogin();
+       $admin -> login = $request -> input('login');
+       $admin -> password = $request ->input('password');
+       $admin -> save();
     }
 
     /**
