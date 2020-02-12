@@ -24,5 +24,8 @@ Route::resource('about-us-page', 'AboutUsController');
 Auth::routes();
 
 Route::get('/admin', 'AdminLoginController@index');
-Route::post('', 'AdminLoginController@store')->name('admin.store');
+Route::get('/login-page-admin', 'AdminLoginController@index');
+Route::get('/register-page-admin', 'AdminRegisterController@index');
+Route::get('', 'AdminRegisterController@store')->name('admin-register.store');
+Route::post('', 'AdminLoginController@store')->name('admin-login.store');
 Route::get('/administrator', 'AdministratorController@index');

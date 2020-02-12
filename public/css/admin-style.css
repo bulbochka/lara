@@ -13,6 +13,7 @@ footer{
     width: 100%;
     height: 20px;
     background-color: gray;
+    margin-top:15px;
 }
 /*NAVIGATION*/
 #nav{
@@ -43,6 +44,10 @@ footer{
 #auth a{
     font-size:15px;
     margin-right: 10px;
+}
+#send-login-admin-btn{
+    background-color: gray;
+    color:black;
 }
 .scrollup {
     position: fixed; /* фиксированная позиция */

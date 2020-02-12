@@ -5,8 +5,8 @@
         </div>
         
         <div id="auth">
-            <a  href="#">Login</a>
-            <a href="#">Register</a>
+            <a  href="login-page-admin">Login</a>
+            <a href="register-page-admin">Register</a>
         </div>
 
   </nav>
