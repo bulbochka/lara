@@ -49,7 +49,7 @@
                     </div>
                     <div class="form-group">
                         {{Form::label('email', 'Email')}}
-                        {{Form::email('email', '', ['class' => 'form-control'])}}
+                        {{Form::email('email_user_review', '', ['class' => 'form-control'])}}
                     </div>
                     <div class="form-group">
                         {{Form::label('review', 'Review')}}
@@ -63,7 +63,7 @@
         <div id="reviews-container-comment" class="container">
             
             <div class="autoplay" id="comment-container">
-                    @if(count($reviews)>1)
+                    @if(count($reviews)>=1)
                         @foreach($reviews as $review)
                             <div id="comment">
                                 <h3>{{$review->name}}</h3>                             

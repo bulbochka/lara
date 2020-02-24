@@ -44,11 +44,12 @@ class AboutUsController extends Controller
         
         $reviews = new AboutUs();
         $reviews -> name = $request -> input('name');
-        $reviews -> email = $request -> input('email');
+        $reviews -> email_user_review = $request -> input('email_user_review');
         $reviews -> review_text = $request -> input('review');
         $reviews->save();
 
         return redirect('/about-us-page') -> with('success', 'Review send!');
+      
     }
 
     /**

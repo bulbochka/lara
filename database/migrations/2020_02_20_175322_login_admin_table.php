@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class RegisterAdminTable extends Migration
+class LoginAdminTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class RegisterAdminTable extends Migration
      */
     public function up()
     {
-        Schema::create('register_for_admin', function (Blueprint $table) {
+        Schema::create('login_for_admin', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('login')->unique();
-            $table->text('email_admin_register');
-            $table->string('password');
+            $table->string('login_auth')->unique();
+            $table->string('password_auth');
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ class RegisterAdminTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('register_for_admin');
+        Schema::dropIfExists('login_for_admin');
     }
 }

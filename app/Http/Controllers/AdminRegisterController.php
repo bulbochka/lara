@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\AdminRegister;
 
 class AdminRegisterController extends Controller
 {
@@ -34,7 +35,26 @@ class AdminRegisterController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $_POST;
+
+        $this->validate($request, [
+            'login' => 'required',
+            'email-admin-register' => 'required',
+            'password' => 'required'
+       ]);
+       
+       $admin = new AdminRegister();
+       $admin -> login = $request -> input('login');
+       $admin -> email_admin_register = $request -> input('email-admin-register');
+       $admin -> password = $request ->input('password');
+
+       if($data['password_2'] != $data['password']){
+            return redirect('/register-page-admin') -> with('error', 'Password re-entered incorrectly');
+       }
+       else{
+            $admin -> save();
+            return redirect('/administrator');
+       }       
     }
 
     /**

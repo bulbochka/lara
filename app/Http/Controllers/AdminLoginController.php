@@ -35,15 +35,16 @@ class AdminLoginController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
+       /* $this->validate($request, [
             'login' => 'required',
             'password' => 'required'
        ]);
        
        $admin = new AdminLogin();
-       $admin -> login = $request -> input('login');
-       $admin -> password = $request ->input('password');
-       $admin -> save();
+       $admin -> login_auth = $request -> input('login_auth');
+       $admin -> password_auth = $request -> input('password_auth');*/
+
+       return redirect('/administrator');
     }
 
     /**

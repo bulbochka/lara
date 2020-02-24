@@ -6,24 +6,24 @@
         {!! Form::open(['route' => 'admin-register.store']) !!}
             <div class="form-group">
                 {{Form::label('login', 'Login')}}
-                {{Form::text('login', '', ['class' => 'form-control'])}}
+                <input type="text" name="login" class="form-control">
             </div>
 
             <div class="form-group">
                 {{Form::label('email', 'Email')}}
-                {{Form::text('email', '', ['class' => 'form-control'])}}
+                <input type="email" class="form-control @error('email') is-invalid @enderror" name="email-admin-register">     
             </div>
 
             <div class="form-group">
                 {{Form::label('password', 'Password')}}
-                {{Form::text('password', '', ['class' => 'form-control'])}}
+                <input type="password" name="password" class="form-control">
             </div>
 
             <div class="form-group">
-                {{Form::label('password', 'Enter password again')}}
-                {{Form::text('password', '', ['class' => 'form-control'])}}
+                {{Form::label('password_2', 'Enter password again')}}
+                <input type="password" name="password_2" class="form-control">
             </div>
-            {{Form::submit('Send', ['class' => 'btn'], ['id' => 'send-login-admin-btn'])}} 
+            {{Form::submit('Send', ['class' => 'btn'], ['id' => 'send-register-admin-btn'])}} 
         {!! Form::close() !!}
         </div>
 
