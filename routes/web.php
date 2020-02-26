@@ -11,28 +11,21 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/*Route::get('/', function () {return view('welcome');});*/
 Route::get('/home/', 'MainController@index');
 Route::get('/contact-page/', 'ContactController@index');
 Route::get('/news-page/', 'NewsController@index');
 Route::get('/about-us-page/', 'AboutUsController@index');
+Route::get('/myadministrator', 'MyAdministratorController@index');
+Route::get('/admin', 'AdminController@index');
+Route::get('/administrator', 'AdministratorController@index');
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Route::resource('about-us-page', 'AboutUsController');
-Route::resource('register-page-admin', 'AdminRegisterController');
-
-Route::get('/admin', 'AdminLoginController@index');
-Route::get('/login-page-admin', 'AdminLoginController@index');
-Route::get('/register-page-admin', 'AdminRegisterController@index');
-Route::post('', 'AdminRegisterController@store')->name('admin-register.store');
-//Route::post('', 'AdminLoginController@store')->name('admin-login.store');
-Route::get('/administrator', 'AdministratorController@index');
-
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
 
 //Auth::routes();
 

@@ -13,7 +13,7 @@ class AdministratorController extends Controller
      */
     public function index()
     {
-        return view('admin.admin-main-page');
+        return view('administrator-page');
     }
 
     /**

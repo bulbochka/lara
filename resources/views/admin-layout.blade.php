@@ -23,10 +23,6 @@
     </head>
 
     <body>
-        @include('admin-layouts.admin-nav')
-        @include('layouts.message')
-        @yield('content')
-        @include('layouts.scroll_up')
-        @include('admin-layouts.admin-footer')
+
     </body>
 </html>
