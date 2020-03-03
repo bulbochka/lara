@@ -14,7 +14,7 @@ class AboutUsController extends Controller
      */
     public function index()
     {
-        $reviews = AboutUs::orderBy('created_at', 'desc')->get();
+        $reviews = AboutUs::orderBy('created_at', 'desc')->paginate(3);
         return view('main.about-us-page')->with('reviews', $reviews);
     }
 
@@ -38,7 +38,7 @@ class AboutUsController extends Controller
     {
         $this->validate($request, [
              'name' => 'required',
-             'email' => 'required',
+             'email_user_review' => 'required',
              'review' => 'required'
         ]);
         

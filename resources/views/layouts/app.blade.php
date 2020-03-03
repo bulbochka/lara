@@ -12,10 +12,6 @@
     <link href="{{asset('css/admin-style.css')}}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     
-
-
-    <script type="text/javascript" src="{{asset('js/bootstrap.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('js/jquery–3.3.1.js')}}"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 <body>

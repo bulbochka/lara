@@ -14,6 +14,10 @@ html{
 }
 /*MAIN PAGE*/
 /*HEADER*/
+/**********/
+/**********/
+/**********/
+/**********/
 header{
     width:100%;
     height: 80px;
@@ -41,13 +45,14 @@ header{
 }
 
 /*IMAGE MENU*/
+/**********/
+/**********/
+/**********/
+/**********/
 #room-container{
-    width: 100%;    
-}
-#rooms{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
+   padding-left:0;
+   padding-right: 0;
+   padding-top:10px;
 }
 #img{
     display: inline-block;
@@ -60,12 +65,26 @@ header{
     transition:5s;
     transform:scale(1.2);
 }
-#living-room, #bedroom, #kitchen, #bathroom{
-    text-align: center;
-    color:black;
+#kitchen, #living-room, #bedroom, #bathroom{
+    width: 50%;
+    height: 50%;
+    padding-left:0;
+    padding-right: 10px;
+}
+#text-living-room h3{
+    margin-left:3%;
+}
+#img img{
+    width:100%;
+    background-size: contain;
 }
 
+
 /*FOOTER*/
+/**********/
+/**********/
+/**********/
+/**********/
 footer{
     width: 100%;
     height: 80px;
@@ -73,6 +92,10 @@ footer{
 }
 
 /*CONTACT-PAGE*/
+/**********/
+/**********/
+/**********/
+/**********/
 #social-container{
     width:100%;
     padding: 10px;
@@ -94,65 +117,36 @@ footer{
     padding: 10px;
 }
 #call-back-container{
-    width: 100%;
-    padding:10px;
-    color:black;
+    background-image: url(../image/brick.jpg);
+    margin-bottom:1%;
     text-align: center;
+    color:black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;   
 }
 #call-back{
+    padding:15px;
     display:flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 70%;
 }
-#call-back-input{
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-}
-#call-back-input input{
-    width: 450px;
-    height: 40px;
-    margin-bottom: 15px;
-    border:0.5px black  solid;
-}
-#call-back-input p{
-    color: black;
-    font-size: 16px;
-}
-#message{
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: center;
-}
-#message p{
+#label-form{
+    font-size:20px;
     color:black;
-    font-size: 16px;
+    font-style: bold;
 }
-#message-text{
-    width: 450px;
-    height: 95px;
-    margin-bottom: 15px;
-    border:0.5px black  solid;
-}
-#btn-send-message{
-    margin-left:15%;
-    width: 455px;
-    height: 40px;
-    margin-top:1%;
-    border:0.5px black  solid;
-    color:white;
-    background-color: black;
-    font-size: 16px;
-}
-#btn-send-message:hover{
-    border:0.5px black  solid;
-    color:black;
-    background-color: white;
+#input-form{
+    border-radius:0%;
+    border:0.5px black solid; 
 }
 
 /*NEWS PAGE*/
+/**********/
+/**********/
+/**********/
+/**********/
 #parallax-container{
     width: 100%;
 }
@@ -216,16 +210,34 @@ footer{
 #text-container{
     width: 100%;
 }
+
+/*ABOUT US PAGE*/
+/**********/
+/**********/
+/**********/
+/**********/
+#about-us-box{
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
 #item-about{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
-    padding: 15px;
-    height: 300px;
+    justify-content: space-between;
     text-align: center;
     color: black;
     font-size: 15px;
+    max-width: 80%;
+}
+.hr-in-text {
+    width: 75%;
+   background-color:black;
+   height: 0.5px;
 }
 .hr hr{
     width: 80%;
@@ -241,7 +253,7 @@ footer{
     padding: 30px;
 }
 #text-about{
-    height: 300px;
+    margin-top: 5%;
     background-repeat: no-repeat;
     background-size: contain;
    /* background-image: url(../image/picture.jpg);*/
@@ -285,7 +297,7 @@ footer{
 #comment-container{
     width: 90%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     
 }
 #comment{
