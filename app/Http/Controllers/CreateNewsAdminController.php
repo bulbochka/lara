@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\CreateNewsAdmin;
 
-class NewsController extends Controller
+class CreateNewsAdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,7 @@ class NewsController extends Controller
      */
     public function index()
     {
-        $news_show = CreateNewsAdmin::orderBy('created_at', 'desc')->paginate(2);
-        return view('main.news-page')->with('news_show', $news_show);
+        return view('admin.create-news-admin');
     }
 
     /**
@@ -36,7 +35,21 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'title_news' => 'required',
+            'text_news' => 'required',
+            'image_news' => 'required'
+       ]);
 
+       $path_image = $request -> file('image_news')->store('uploads', 'public');
+
+        $news = new CreateNewsAdmin();
+        $news -> title_news = $request -> input('title_news');
+        $news -> text_news = $request -> input('text_news');
+        $news -> path_image = $path_image;
+        $news -> save();
+
+        return redirect('/news-page-admin')->with('success', 'News save!');
     }
 
     /**
@@ -58,7 +71,7 @@ class NewsController extends Controller
      */
     public function edit($id)
     {
-        //
+        
     }
 
     /**

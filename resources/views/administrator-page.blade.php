@@ -1,22 +1,22 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="tabs">
-    <input type="radio" name="inset" value="" id="tab_1" checked>
-    <label for="tab_1">News</label>
-
-    <input type="radio" name="inset" value="" id="tab_2">
-    <label for="tab_2">Gallery</label>
-
-    <div id="txt_1">
-
+    <div id="item-h" class="container-fluid">
+        <h1>Hi Admin!</h1>
     </div>
 
-    <div id="txt_2">
+    <div class="hr"><hr></div>
+
+    <div class="container-fluid">
+        <div>
+            <div id="list-page" class="row">
+                <div id="news-page-admin">
+                    <a href="news-page-admin">News</a>
+                </div>
+                <div id="gallery-page-admin">
+                    <a href="#">Gallery</a>
+                </div>
+            </div>
+        </div>
     </div>
-    
-    <div id="txt_4">
-        <img src="image/logo.png" width="533" height="77" alt="Лого">
-    </div>
-</div>
 @endsection

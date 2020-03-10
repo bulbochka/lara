@@ -17,6 +17,7 @@
 <body>
     <div id="app">      
         @include('admin-layouts.admin-nav')
+        @include('layouts.message')
         <div class="container">
             @yield('content')
         </div>

@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\CreateNewsAdmin;
 
-class NewsController extends Controller
+class EditNewsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +15,8 @@ class NewsController extends Controller
      */
     public function index()
     {
-        $news_show = CreateNewsAdmin::orderBy('created_at', 'desc')->paginate(2);
-        return view('main.news-page')->with('news_show', $news_show);
+        $news = CreateNewsAdmin::all();
+        return view('admin.edit-news-admin') -> with('news', $news);
     }
 
     /**
@@ -36,7 +37,7 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-
+        //
     }
 
     /**
@@ -47,7 +48,7 @@ class NewsController extends Controller
      */
     public function show($id)
     {
-        //
+        $find_news = CreateNewsAdmin::find($id);
     }
 
     /**
@@ -58,7 +59,9 @@ class NewsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $news = CreateNewsAdmin::find($id);
+        return view('admin.edit-news-admin')->with('news', $news);
+
     }
 
     /**
@@ -70,7 +73,22 @@ class NewsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $news = CreateNewsAdmin::find($id);
+
+        $save_path_image = $news -> path_image;
+        $new_path_image = $request -> file('image_news');
+          
+
+        $news -> title_news = $request -> input('title_news');
+        $news -> text_news = $request -> input('text_news');
+        if(Storage::exists($new_path_image))
+            $news -> path_image = $save_path_image;
+        else
+            $news -> path_image =$request -> input('image_news') ->store('uploads', 'public');
+
+        $news -> save();
+        
+        return redirect('/news-page-admin')->with('success', 'News edit!');
     }
 
     /**

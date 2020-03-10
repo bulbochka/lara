@@ -19,9 +19,16 @@ Route::get('/about-us-page/', 'AboutUsController@index');
 Route::get('/myadministrator', 'MyAdministratorController@index');
 Route::get('/admin', 'AdminController@index');
 Route::get('/administrator', 'AdministratorController@index');
+Route::get('/news-page-admin', 'NewsPageAdminController@index');
+Route::get('/create-news-admin', 'CreateNewsAdminController@index');
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Route::resource('about-us-page', 'AboutUsController');
+Route::resource('create-news-admin', 'CreateNewsAdminController');
+Route::resource('news-page-admin', 'NewsPageAdminController');
+Route::resource('news-page', 'NewsController');
+Route::resource('edit-news-admin', 'EditNewsController');
+Route::resource('delete-news-admin', 'DeleteNewsController');
 
 Auth::routes();
 

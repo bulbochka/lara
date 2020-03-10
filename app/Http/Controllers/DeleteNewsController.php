@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\CreateNewsAdmin;
 
-class NewsController extends Controller
+class DeleteNewsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,7 @@ class NewsController extends Controller
      */
     public function index()
     {
-        $news_show = CreateNewsAdmin::orderBy('created_at', 'desc')->paginate(2);
-        return view('main.news-page')->with('news_show', $news_show);
+        //
     }
 
     /**
@@ -36,7 +35,7 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-
+        //
     }
 
     /**
@@ -47,7 +46,7 @@ class NewsController extends Controller
      */
     public function show($id)
     {
-        //
+        $news = CreateNewsAdmin::find($id);
     }
 
     /**
@@ -81,6 +80,8 @@ class NewsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $news = CreateNewsAdmin::find($id);
+        $news -> delete();
+        return redirect('/news-page-admin')->with('success', 'News removed!');
     }
 }
