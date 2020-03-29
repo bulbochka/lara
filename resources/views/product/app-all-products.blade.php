@@ -24,6 +24,7 @@
         @include('layouts.nav')
         @include('layouts.message')
         @yield('content')
+        @include('product.layout-product-page')
         @include('layouts.footer')
     </body>
 </html>

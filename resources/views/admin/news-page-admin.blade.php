@@ -15,7 +15,7 @@
 
     <div class="container-fluid">
         <table class="table table-hover">
-            <thead style="background-color:#79c7c6;">
+            <thead style="background-color:#6cb2eb;">
                 <tr>
                     <th scope="col">№</th>
                     <th scope="col">Title</th>

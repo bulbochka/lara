@@ -18,37 +18,25 @@ html{
 /**********/
 /**********/
 /**********/
-header{
-    width:100%;
-    height: 80px;
-    background-color: black;
-}
-#navigation{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-#nav{
-    width: 90%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-}
-#menu-page{
+.navigation a{
     text-decoration: none;
     color: white;
+    font-size:16px;
 }
-#cart-login{
-    width: 70px;
+#cart-container{
+    margin-left: 80%;
 }
+
 
 /*IMAGE MENU*/
 /**********/
 /**********/
 /**********/
 /**********/
+#rooms{
+    margin-right:0;
+    margin-left:0;
+}
 #room-container{
    padding-left:0;
    padding-right: 0;
@@ -69,7 +57,7 @@ header{
     width: 50%;
     height: 50%;
     padding-left:0;
-    padding-right: 10px;
+    padding-right: 0;
 }
 #text-living-room h3{
     margin-left:3%;
@@ -87,8 +75,8 @@ header{
 /**********/
 footer{
     width: 100%;
-    height: 80px;
-    background-color: black;
+    height: 50px;
+    background-color: #212529;
 }
 
 /*CONTACT-PAGE*/
@@ -270,21 +258,46 @@ footer{
 #comment{
     padding: 2%;
 }
-.scrollup {
-    position: fixed; /* фиксированная позиция */
-    color: #ffff; /* цвет текста */
-    background-color: #ed0f80 ; /* цвет заднего фона */
-    right: 20px; /* расстояние от правого края */
-    bottom: 0px; /* расстояние от нижнего края */
-    padding: 8px 10px; /* отступы до содержимого блока */
-    font-size: 20px; /* размер шрифта (иконки) */
-    border-top-left-radius: 4px; /* скругление верхнего левого угла */
-    border-top-right-radius: 4px; /* скругление верхнего правого угла */
-    cursor: pointer; /* форма курсора */
-    display: none; /* не отображать элемент */
-    text-align: center; /*выравнивание содержимого элемента по центру */
-    height: 50px;
-  }
-  .scrollup:hover {
-    background-color: #000; /* цвет заднего фона при наведении */
-  }
+
+/*LIVNG ROOM PAGE*/
+/**********/
+/**********/
+/**********/
+/**********/
+
+#categories-container{
+    padding:15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#sort-button{
+    width: 300px;
+    margin:10px;
+}
+#text-categories{
+    padding-top:10%;
+    padding-bottom:3%;
+    margin:0;
+}
+#radio-option-categories{
+    display:flex;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 16px;
+}
+#card-footer-container{
+    text-align: center;
+}
+#price-label{
+    font-size: 30px;
+    padding: 5px;
+}
+#price{
+    font-size: 30px;
+    color:green;
+    padding: 5px;
+}
+#go-cart-btn{
+    width: 200px;
+}

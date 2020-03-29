@@ -32,17 +32,17 @@ html{
     align-items: center;
     padding: 15px;
 }
-#news-page-admin a, #gallery-page-admin a{
+#news-page-admin a, #living-room-page-admin a, #bathroom-page-admin a, #bedroom-page-admin a, #kitchen-page-admin a{
     text-decoration:none;
     color:black;
     font-size: 24px;
     padding: 10px;
     width: 100%;
 }
-#news-page-admin:hover, #gallery-page-admin:hover{
-    background:linear-gradient(to right,#79c7c6,#ffff);
+#news-page-admin:hover, #living-room-page-admin:hover, #bathroom-page-admin:hover, #bedroom-page-admin:hover, #kitchen-page-admin:hover{
+    background:linear-gradient(to right,#6cb2eb,#ffff);
 }
-#news-page-admin, #gallery-page-admin {
+#news-page-admin, #living-room-page-admin, #bathroom-page-admin, #bedroom-page-admin, #kitchen-page-admin{
     width:80%; 
     margin-bottom: 10px;
 }
@@ -67,23 +67,3 @@ html{
     text-align: center;
     color:black;
 }
-
-
-
-
-
-.scrollup {
-    position: fixed; /* фиксированная позиция */
-    color: #ffff; /* цвет текста */
-    background-color: #ed0f80 ; /* цвет заднего фона */
-    right: 20px; /* расстояние от правого края */
-    bottom: 0px; /* расстояние от нижнего края */
-    padding: 8px 10px; /* отступы до содержимого блока */
-    font-size: 20px; /* размер шрифта (иконки) */
-    border-top-left-radius: 4px; /* скругление верхнего левого угла */
-    border-top-right-radius: 4px; /* скругление верхнего правого угла */
-    cursor: pointer; /* форма курсора */
-    display: none; /* не отображать элемент */
-    text-align: center; /*выравнивание содержимого элемента по центру */
-    height: 50px;
-  }

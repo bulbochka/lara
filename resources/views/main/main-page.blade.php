@@ -6,13 +6,13 @@
                 <div id="rooms" class="row">
                     <div id="living-room" class="col-lg-6 col-md-12 col-sm-12">
                         <div id="img">
-                            <a href="#"><img id="room" src="/public/image/living-room/living-room-1.jpg"></a>
+                            <a href="living-room-product"><img id="room" src="/public/image/living-room/living-room-1.jpg"></a>
                         </div>              
                     </div>
 
                     <div id="bedroom" class="col-lg-6 col-md-12 col-sm-12">
                         <div id="img">
-                            <a href="#"><img id="room" src="/public/image/bedroom/bedroom.jpg"></a>
+                            <a href="bedroom-product"><img id="room" src="/public/image/bedroom/bedroom.jpg"></a>
                         </div>                   
                     </div>
 
@@ -20,13 +20,13 @@
 
                     <div id="kitchen" class="col-lg-6 col-md-12 col-sm-12">
                         <div id="img">
-                            <a href="#"><img id="room" src="/public/image/kitchen/kitchen-2.jpg"></a>
+                            <a href="kitchen-product"><img id="room" src="/public/image/kitchen/kitchen-2.jpg"></a>
                         </div>
                     </div>
 
                     <div id="bathroom" class="col-lg-6 col-md-12 col-sm-12">
                         <div id="img">
-                            <a href="#"><img id="room" src="/public/image/bathroom/bathroom.jpg"></a>
+                            <a href="bathroom-product"><img id="room" src="/public/image/bathroom/bathroom.jpg"></a>
                         </div>
                     </div>
                 </div>

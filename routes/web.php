@@ -14,7 +14,6 @@
 /*Route::get('/', function () {return view('welcome');});*/
 Route::get('/home/', 'MainController@index');
 Route::get('/contact-page/', 'ContactController@index');
-Route::get('/news-page/', 'NewsController@index');
 Route::get('/about-us-page/', 'AboutUsController@index');
 Route::get('/myadministrator', 'MyAdministratorController@index');
 Route::get('/admin', 'AdminController@index');
@@ -29,6 +28,10 @@ Route::resource('news-page-admin', 'NewsPageAdminController');
 Route::resource('news-page', 'NewsController');
 Route::resource('edit-news-admin', 'EditNewsController');
 Route::resource('delete-news-admin', 'DeleteNewsController');
+Route::resource('living-room-product', 'LivingRoomController');
+Route::resource('kitchen-product', 'KitchenController');
+Route::resource('bedroom-product', 'BedroomController');
+Route::resource('bathroom-product', 'BathroomController');
 
 Auth::routes();
 

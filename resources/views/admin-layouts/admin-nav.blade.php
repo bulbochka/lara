@@ -1,4 +1,4 @@
-<nav id="navbar-admin" class="navbar navbar-expand-md shadow-sm" style="background-color: #79c7c6;">
+<nav id="navbar-admin" class="navbar navbar-expand-md shadow-sm" style="background-color: #6cb2eb;">
     <div class="container">
         <a class="navbar-brand" href="admin" style="color:black;">
             Administrator
