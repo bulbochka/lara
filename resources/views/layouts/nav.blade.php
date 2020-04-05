@@ -3,7 +3,7 @@
         <a class="navbar-brand" href="home">Shop</a>
 
         <div  id="cart-container">
-            <a href="#" placeholder="cart"><img src="/public/image/icon/cart-icon.png"></a>
+            <a href="cart" placeholder="cart"><img src="/public/image/icon/cart-icon.png"></a>
         </div>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">

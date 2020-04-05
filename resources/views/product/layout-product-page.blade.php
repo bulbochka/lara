@@ -30,26 +30,31 @@
                     </label>
                 </div>
             </div>
+            
+            @if(count($product)>=1) 
+                @foreach($product as $products)         
+                    <div class="col-lg-3 col-md-12" id="product-container">            
+                        <div class="card-deck">
+                            <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                                <img src="{{asset ('/storage/' . $products -> path_image)}}" class="card-img-top" alt="...">
 
+                                <div class="card-body">
+                                    <h4 class="card-title">{{$products -> name_product}}</h4>
+                                    <p class="card-text">{{$products -> manufacturer}}</p>
+                                </div>
 
-            <div class="col-lg-9 col-md-12">
-                <div class="card-deck">
-                    <div class="card border-secondary mb-3" style="max-width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
-
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        </div>
-
-                        <div class="card-footer" id="card-footer-container">
-                            <label id="price-label">Price: </label>
-                            <label id="price">2 000</label>
-                            <a href="#" class="btn btn-info" id="go-cart-btn">Go cart</a>
-                        </div>
-                    </div>                    
-                </div>
-            </div>
+                                <div class="card-footer" id="card-footer-container">
+                                    <label id="price-label">Price: </label>
+                                    <label id="price">{{$products -> price}}</label>
+                                    <a href="#" class="btn btn-info" id="go-cart-btn">Go cart</a>
+                                </div>
+                            </div>                    
+                        </div>              
+                    </div>
+                @endforeach
+            @else
+                <p>No products</p>
+            @endif
         </div>
     </div>
 </div>

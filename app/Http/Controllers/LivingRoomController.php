@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Products;
 
 class LivingRoomController extends Controller
 {
@@ -13,7 +14,8 @@ class LivingRoomController extends Controller
      */
     public function index()
     {
-        return view('product.living-room-products');
+        $product = Products::all()->where('categories', 'living-room');
+        return view('product.living-room-products')->with('product',$product);
     }
 
     /**

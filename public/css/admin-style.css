@@ -67,3 +67,22 @@ html{
     text-align: center;
     color:black;
 }
+
+/*PRODUCT PAGE*/
+/*****************/
+/*****************/
+/*****************/
+/*****************/
+/*****************/
+#categories{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+#manufacturer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}

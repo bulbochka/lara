@@ -6,5 +6,7 @@
     </div>
     <div class="hr"><hr ></div>
 
-    
+    <div id="parallax-container" class="container-fluid">
+        <div class="my-parallax-prod" style="background-image:url('../image/living-room/living-room-prod.jpg');"></div>
+    </div> 
 @endsection

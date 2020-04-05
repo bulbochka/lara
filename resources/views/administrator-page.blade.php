@@ -15,19 +15,7 @@
                 </div>
 
                 <div id="living-room-page-admin">
-                    <a href="#">Living room</a>
-                </div>
-
-                <div id="bedroom-page-admin">
-                    <a href="#">Bedroom</a>
-                </div>
-
-                <div id="kitchen-page-admin">
-                    <a href="#">Kitchen</a>
-                </div>
-
-                <div id="bathroom-page-admin">
-                    <a href="#">Bathroom</a>
+                    <a href="product-page-admin">Products</a>
                 </div>
             </div>
         </div>

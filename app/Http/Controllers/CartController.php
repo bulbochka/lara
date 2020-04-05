@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Products;
 
-class KitchenController extends Controller
+class CartController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +13,7 @@ class KitchenController extends Controller
      */
     public function index()
     {
-        $product = Products::all()->where('categories', 'kitchen');
-        return view('product.kitchen-products')->with('product', $product);
+        return view('cart.cart');
     }
 
     /**

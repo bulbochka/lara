@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Products;
 
 class BathroomController extends Controller
 {
@@ -13,7 +14,8 @@ class BathroomController extends Controller
      */
     public function index()
     {
-        return view('product.bathroom-products');
+        $product = Products::all()->where('categories', 'bathroom');
+        return view('product.bathroom-products')->with('product', $product);
     }
 
     /**

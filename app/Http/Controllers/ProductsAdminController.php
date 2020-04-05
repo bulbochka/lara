@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Products;
 
-class KitchenController extends Controller
+class ProductsAdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class KitchenController extends Controller
      */
     public function index()
     {
-        $product = Products::all()->where('categories', 'kitchen');
-        return view('product.kitchen-products')->with('product', $product);
+        $product = Products::all();
+        return view('admin.product.product-page-admin')->with('product', $product);
     }
 
     /**
@@ -25,7 +25,7 @@ class KitchenController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -47,7 +47,7 @@ class KitchenController extends Controller
      */
     public function show($id)
     {
-        //
+        $product = Products::find($id);
     }
 
     /**
@@ -81,6 +81,8 @@ class KitchenController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $product = Products::find($id);
+        $product -> delete();
+        return redirect('/product-page-admin')->with('success', 'Product removed!');
     }
 }
