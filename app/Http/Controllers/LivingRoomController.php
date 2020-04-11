@@ -14,7 +14,7 @@ class LivingRoomController extends Controller
      */
     public function index()
     {
-        $product = Products::all()->where('categories', 'living-room');
+        $product = Products::all()->where('room', 'living-room');
         return view('product.living-room-products')->with('product',$product);
     }
 

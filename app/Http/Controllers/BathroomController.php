@@ -14,7 +14,7 @@ class BathroomController extends Controller
      */
     public function index()
     {
-        $product = Products::all()->where('categories', 'bathroom');
+        $product = Products::all()->where('room', 'bathroom');
         return view('product.bathroom-products')->with('product', $product);
     }
 

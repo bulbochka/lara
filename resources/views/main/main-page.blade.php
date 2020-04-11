@@ -28,7 +28,7 @@
         </div>
 
         <div id="item-h" class="container-fluid">
-            <h1>Categories</h1>
+            <h1>Furniture for room</h1>
         </div>
 
         <div class="hr"><hr></div>
@@ -65,7 +65,7 @@
             </div>          
         </div>
 
-        <div id="item-h" class="container-fluid">
+    <div id="item-h" class="container-fluid">
         <h1>All products</h1>
     </div>
 

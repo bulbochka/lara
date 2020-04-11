@@ -19,7 +19,7 @@
                 <tr>
                     <th scope="col">№</th>
                     <th scope="col">Name</th>
-                    <th scope="col">Categories</th>
+                    <th scope="col">Room</th>
                     <th scope="col">Change</th>
                     <th scope="col">Delete</th>
                 </tr>
@@ -31,7 +31,7 @@
                         <tr>                          
                             <th>{{$products -> id}}</th>                          
                             <td>{{$products -> name_product}}</td>
-                            <td>{{$products -> categories}}</td>
+                            <td>{{$products -> room}}</td>
                             <td><a href="#" class="btn btn-primary">Change</a></td>
                             <td>{!!Form::open(['action' => ['ProductsAdminController@destroy', $products -> id], 'method' => 'POST'])!!}
                                     {{Form::hidden('_method', 'DELETE')}}

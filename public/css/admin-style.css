@@ -74,13 +74,19 @@ html{
 /*****************/
 /*****************/
 /*****************/
-#categories{
+#room{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
 }
 #manufacturer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+#categories{
     display: flex;
     flex-direction: row;
     justify-content: space-around;

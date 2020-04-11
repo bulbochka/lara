@@ -10,4 +10,3 @@ class Cart extends Model
     public $primaryKey =  'id';
     public $timestamps = true;
 }
-

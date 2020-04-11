@@ -17,6 +17,7 @@ class Products extends Migration
             $table->bigIncrements('id');
             $table->text('name_product');
             $table->text('categories');
+            $table->text('room');
             $table->text('manufacturer');
             $table->double('price');
             $table->text('description');

@@ -39,6 +39,7 @@ class CreateProductsAdminController extends Controller
             'name_product' => 'required',
             'categories_radio' => 'required',
             'price_product' => 'required',
+            'room_radio' => 'required',
             'manufacturer_radio' => 'required',
             'description_product' => 'required',
             'image_product' => 'required'
@@ -49,6 +50,7 @@ class CreateProductsAdminController extends Controller
        $product = new Products();
        $product -> name_product = $request -> input('name_product');
        $product -> categories = $request -> get('categories_radio',0);
+       $product -> room = $request -> get('room_radio', 0);
        $product -> price = $request -> input('price_product');
        $product -> manufacturer = $request -> get('manufacturer_radio',0);
        $product -> description = $request -> input('description_product');

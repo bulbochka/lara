@@ -27,24 +27,31 @@
                             {{Form::text('price_product', '', ['class' => 'form-control'])}}
                         </div>
                         
-                        <h5>Categories:</h5>
-                        <div class="form-group" id="categories">                           
-                            <label><input type="radio" name="categories_radio" value="living-room" checked>Living room</label>
+                        <h5>Room:</h5>
+                        <div class="form-group" id="room">                           
+                            <label><input type="radio" name="room_radio" value="living-room" checked>Living room</label>
 
-                            <label><input type="radio" name="categories_radio" value="bedroom">Bedroom</label>
+                            <label><input type="radio" name="room_radio" value="bedroom">Bedroom</label>
 
-                            <label><input type="radio" name="categories_radio" value="kitchen">Kitchen</label>
+                            <label><input type="radio" name="room_radio" value="kitchen">Kitchen</label>
 
-                            <label><input type="radio" name="categories_radio" value="bathroom">Bathroom</label>                         
+                            <label><input type="radio" name="room_radio" value="bathroom">Bathroom</label>                         
                         </div>
 
                         <h5>Manufacturer:</h5>
                         <div class="form-group" id="manufacturer">                   
-                            <label><input type="radio" name="manufacturer_radio" value="italy" checked>Italy</label>
+                            <label><input type="radio" name="manufacturer_radio" value="Italy" checked>Italy</label>
 
-                            <label><input type="radio" name="manufacturer_radio" value="france">Frace</label>
+                            <label><input type="radio" name="manufacturer_radio" value="France">Frace</label>
 
-                            <label><input type="radio" name="manufacturer_radio" value="england">England</label> 
+                            <label><input type="radio" name="manufacturer_radio" value="England">England</label> 
+                        </div>
+
+                        <h5>Categories:</h5>
+                        <div class="form-group" id="manufacturer">                   
+                            <label><input type="radio" name="categories_radio" value="furniture" checked>Furniture</label>
+
+                            <label><input type="radio" name="categories_radio" value="france">Appliances</label>
                         </div>
 
                         <div class="form-group">

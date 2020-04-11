@@ -14,7 +14,7 @@ class KitchenController extends Controller
      */
     public function index()
     {
-        $product = Products::all()->where('categories', 'kitchen');
+        $product = Products::all()->where('room', 'kitchen');
         return view('product.kitchen-products')->with('product', $product);
     }
 
