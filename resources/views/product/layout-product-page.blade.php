@@ -14,6 +14,7 @@
                     </div>
                 </div>
 
+
                 <h2 id="text-categories">Categories:</h3>
 
                 <div class="form-group" id="radio-option-categories">
@@ -30,12 +31,12 @@
                     </label>
                 </div>
             </div>
-            
+
             @if(count($product)>=1) 
                 @foreach($product as $products)         
-                    <div class="col-lg-3 col-md-12" id="product-container">            
-                        <div class="card-deck">
-                            <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                    <div class="col-lg-3 col-md-3" id="product-container">            
+                        <div class="card-deck" id="card-container">
+                            <div class="card border-dark mb-3" id="card-body" style="max-width: 18rem;">
                                 <img src="{{asset ('/storage/' . $products -> path_image)}}" class="card-img-top" alt="...">
 
                                 <div class="card-body">
@@ -45,16 +46,26 @@
 
                                 <div class="card-footer" id="card-footer-container">
                                     <label id="price-label">Price: </label>
-                                    <label id="price">{{$products -> price}}</label>
-                                    <a href="#" class="btn btn-info" id="go-cart-btn">Go cart</a>
+                                    <label id="price">{{$products -> price}} $</label>
+
+                                    {!!Form::open(['action' => ['CartController@store'], 'method' => 'POST'])!!}
+                                        <input type="hidden" name="id" value="{{ $products->id }}">
+                                        <input type="hidden" name="name" value="{{ $products->name_product }}">
+                                        <input type="hidden" name="price" value="{{ $products->price }}">
+                                        <button type="submit" class="btn" id="go-cart-btn">Add to cart</button>
+                                    {!!Form::close()!!}
                                 </div>
                             </div>                    
                         </div>              
                     </div>
                 @endforeach
+
             @else
-                <p>No products</p>
+                <div id="empty-div">
+                    <h2>No products</h2>
+                </div>
             @endif
+
         </div>
     </div>
 </div>

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Products;
+use Darryldecode\Cart\Cart;
 
 class CartController extends Controller
 {
@@ -34,7 +36,11 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $product = new Products();
+        /*$userId = auth()->user()->id; 
+        \Cart::session($userId)->add($request->id, $request->name, $request->price, 1, array())->associate('App\Products');*/    
+        \Cart::add($request->id, $request->name, $request->price, 1, array())->associate('App\Products');
+        return redirect('/cart') -> with('success', 'Item was added to you cart!');
     }
 
     /**
@@ -78,7 +84,9 @@ class CartController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
-    {
-        //
+    {          
+        \Cart::remove($id);
+
+        return back()->with('success', 'Product remove!');
     }
 }

@@ -75,31 +75,27 @@
             <div>
                 <div class="row" id="card-container">
                     @if(count($product)>=1) 
-                    @foreach($product as $products)         
-                        <div class="col-lg-3 col-md-12" id="product-container">            
-                            <div class="card-deck" id="myCard">
-                                <div class="card border-secondary mb-3" style="max-width: 18rem;">
-                                    <img src="{{asset ('/storage/' . $products -> path_image)}}" class="card-img-top" alt="...">
-
-                                    <div class="card-body">
-                                        <h4 class="card-title">{{$products -> name_product}}</h4>
-                                        <p class="card-text">{{$products -> manufacturer}}</p>
-                                    </div>
-
-                                    <div class="card-footer" id="card-footer-container">
-                                        <label id="price-label">Price: </label>
-                                        <label id="price">{{$products -> price}}</label>
-                                        <a href="#" class="btn btn-info" id="go-cart-btn">Go cart</a>
-                                    </div>
-                                </div>                    
-                            </div>              
+                    @foreach($product as $products)
+                    <div class="col-lg-3 col-md-12" id="product-container"> 
+                        <div id="card-main-page" class="card border-dark mb-3">
+                            <img src="{{asset ('/storage/' . $products -> path_image)}}" class="card-img" alt="...">
+                            <div id="card-text-main-page" class="card-img-overlay">
+                                <h2 style="color:black;" class="card-title">{{$products -> name_product}}</h2>
+                                <h5 style="color:black;" class="card-text">{{$products -> manufacturer}}</h5>
+                                <h4 style="color:black;" class="card-text">{{$products -> price}} $</h4>
+                            </div>
                         </div>
+                    </div> 
                     @endforeach
                     
                     @else
                         <p>No products</p>
                     @endif
                 </div>
+                
+                    <div id="btn-container">
+                         <a href="product" id="more-product-btn" class="btn">More product -></a>
+                     </div>
             </div>
         </div>
 @endsection

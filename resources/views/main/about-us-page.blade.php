@@ -72,7 +72,9 @@
                                 </div>
                             @endforeach
                         @else
-                            <p>No comment</p>
+                            <div id="empty-div">
+                                <h2>No review</h2>
+                            </div>
                         @endif
                 </div>
         </div>

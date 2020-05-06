@@ -23,6 +23,8 @@
                 {{$news_show->links()}}
             </div>          
         @else
-            <p>No news</p>
+            <div id="empty-div">
+                <h2>No news</h2>
+            </div>
         @endif
 @endsection

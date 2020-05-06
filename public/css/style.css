@@ -8,7 +8,11 @@ html{
     height: 100%;
     overflow-x: hidden;
 }
+#empty-div{
+    text-align: center;
+}
 #item-h{
+    margin-top: 15px;
     text-align: center;
     color:black;
 }
@@ -23,8 +27,34 @@ html{
     color: white;
     font-size:16px;
 }
+#link-menu{
+    text-decoration:none;
+    font-size: 16px;
+}
+#link-menu:hover{
+    color:gray;
+}
 #cart-container{
     margin-left: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 100px;
+}
+#cart-img-container{
+    width: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#cart-count{
+    height: 20px;
+    width: 20px;
+    background-color: green;
+    color: white; 
+    border-radius: 50%;   
+    text-align: center;
+    font-size: 14px;
 }
 .carousel-container{
     margin-bottom: 15px;
@@ -289,6 +319,8 @@ footer{
 }
 #card-footer-container{
     text-align: center;
+    margin-bottom: 2%;
+    background-color: white;
 }
 #price-label{
     font-size: 30px;
@@ -300,7 +332,30 @@ footer{
     padding: 5px;
 }
 #go-cart-btn{
+    color:black;
+    border:0.5px solid black;
+    background-color: white;
+    border-radius: 0;
+    font-size:18px;
+    height: 40px;
     width: 200px;
+}
+#go-cart-btn:hover{
+    color:white;
+    background-color: black;
+}
+#card-container{
+    justify-content: center;
+}
+#card-body{
+    border-radius: 0;
+    justify-content: center;
+    align-items: center;
+}
+#card-body img{
+    max-width: 98%;
+    border-radius: 0;
+    margin-top:3px;
 }
 
 /*PRODUCTS IN MAIN-PAGE*/
@@ -308,22 +363,33 @@ footer{
 /**********/
 /**********/
 /**********/
-#myCard{
-    display:flex;
-    flex-direction: column;
+#card-main-page{
+    border-radius: 0;
+    justify-content: center;
     align-items: center;
 }
+
+#card-main-page img{
+    max-width: 98%;
+    border-radius: 0;
+    margin-top:3px;
+    margin-bottom: 3px;
+}
+#card-text-main-page{
+    background-color: white;
+    opacity: 0.6;
+    top:50%;
+}
 #card-container{
-    margin:3%;
+    margin:1%;
 }
-.my-parallax-prod{
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 40vh;
-    margin-bottom: 15px;
+#btn-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1%;
 }
+
 
 /*CART*/
 /**********/
@@ -334,9 +400,9 @@ footer{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
-#confirm-btn{
+#confirm-btn, #more-product-btn{
     border-radius: 0;
     margin-bottom: 10px;
     width: 500px;
@@ -348,6 +414,12 @@ footer{
     font-size: 20px;
 }
 #confirm-btn:hover{
-    background-color:  #212529;
+    background-color: yellowgreen;
     color:white; 
+    border: transparent;
+}
+#more-product-btn:hover{
+    background-color:  green;
+    color:white; 
+    border: transparent;
 }

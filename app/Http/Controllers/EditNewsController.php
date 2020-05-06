@@ -75,16 +75,16 @@ class EditNewsController extends Controller
     {
         $news = CreateNewsAdmin::find($id);
 
-        $save_path_image = $news -> path_image;
+        $save_path_image = $request -> input('old_path_image');
         $new_path_image = $request -> file('image_news');
           
 
         $news -> title_news = $request -> input('title_news');
         $news -> text_news = $request -> input('text_news');
-        if(Storage::exists($new_path_image))
+        if(empty($new_path_image))
             $news -> path_image = $save_path_image;
         else
-            $news -> path_image =$request -> input('image_news') ->store('uploads', 'public');
+            $news -> path_image = $request -> input('image_news') ->store('uploads', 'public');
 
         $news -> save();
         

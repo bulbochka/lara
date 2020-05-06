@@ -12,11 +12,14 @@
 */
 
 /*Route::get('/', function () {return view('welcome');});*/
-Route::get('/home/', 'MainController@index');
+Route::get('home', 'MainController@index');
 Route::get('/contact-page/', 'ContactController@index');
 Route::get('/admin', 'AdminController@index');
 Route::get('/administrator', 'AdministratorController@index');
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+Route::get('empty', function(){
+    \Cart::clear();
+});
 
 Route::resource('about-us-page', 'AboutUsController');
 Route::resource('news-page', 'NewsController');
@@ -24,6 +27,7 @@ Route::resource('living-room-product', 'LivingRoomController');
 Route::resource('kitchen-product', 'KitchenController');
 Route::resource('bedroom-product', 'BedroomController');
 Route::resource('bathroom-product', 'BathroomController');
+Route::resource('product', 'ProductController');
 Route::resource('cart', 'CartController');
 
 Route::resource('product-page-admin', 'ProductsAdminController');

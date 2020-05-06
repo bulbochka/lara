@@ -14,7 +14,8 @@
                         <div class="form-group">
                             {{Form::label('image-news', 'Image')}}
                             </br>
-                            {{Form::file('image',['name' => 'image_news'], ['value' => "{{!! $news -> path_image !!}}"])}}
+                            <input type="hidden" name="old_path_image" value="{{ $news->path_image }}">
+                            {{Form::file('image', ['name' => 'image_news'])}}
                         </div>
                         <div class="form-group">
                             {{Form::label('title-news', 'Title')}}

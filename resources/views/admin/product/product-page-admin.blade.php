@@ -2,7 +2,7 @@
 
 @section('content')
     <div id="item-h" class="container-fluid">
-        <h1>News</h1>
+        <h1>Product</h1>
     </div>
 
     <div class="hr"><hr></div>
